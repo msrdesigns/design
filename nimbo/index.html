@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nimbo | Coffee shop Madrid</title>
+  <meta name="description" content="En Nimbo no solo vendemos café. Vendemos pausa. Cafetería de especialidad en Madrid.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Cabecera -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Nimbo, inicio">
+        <img src="img/logo-icon.svg" alt="" width="22" height="22">
+        <span>Nimbo</span>
+      </a>
+
+      <button type="button" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav id="main-nav" class="site-nav" aria-label="Principal">
+        <ul class="nav-list">
+          <li><a href="#ubicaciones">Ubicaciones</a></li>
+          <li><a href="#nuestro-cafe">Nuestro café</a></li>
+          <li><a href="#conocenos">Sobre nosotros</a></li>
+          <li><a href="#carta">Carta</a></li>
+          <li><a href="#contacto" class="btn btn--dark btn--small">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="nuestro-cafe">
+      <div class="container">
+        <h1>En Nimbo no solo vendemos café. Vendemos <em>pausa.</em></h1>
+        <a href="#conocenos" class="btn btn--light">Descubre Nimbo</a>
+      </div>
+    </section>
+
+    <!-- Diferenciales -->
+    <section class="section features">
+      <div class="container">
+        <h2>¿Aún no sabes lo<br>que nos diferencia?</h2>
+
+        <ul class="features-list">
+          <li>
+            <img src="img/icon-sabor.png" alt="" width="48" height="48">
+            <span>Sabor<br>inconfundible</span>
+          </li>
+          <li>
+            <img src="img/icon-planeta.png" alt="" width="48" height="48">
+            <span>Respetuosas con<br>el planeta</span>
+          </li>
+          <li>
+            <img src="img/icon-cercania.png" alt="" width="48" height="48">
+            <span>Producto de<br>cercanía</span>
+          </li>
+          <li>
+            <img src="img/icon-comunidad.png" alt="" width="48" height="48">
+            <span>Creamos<br>comunidad</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Ubicaciones -->
+    <section class="section section--sand locations" id="ubicaciones">
+      <div class="container">
+        <h2>Nuestras ubicaciones</h2>
+
+        <div class="carousel" aria-roledescription="carrusel" aria-label="Ubicaciones">
+          <article class="slide is-active" style="--slide-image: url('img/madrid.jpg')">
+            <h3>Nimbo<br>Madrid</h3>
+            <p>Una cafetería de especialidad en pleno corazón de Malasaña.</p>
+            <a href="#" class="link-arrow">Ver más <span aria-hidden="true" class="arrow"></span></a>
+          </article>
+
+          <article class="slide" style="--slide-image: url('img/madrid2.jpg')" hidden>
+            <h3>Nimbo<br>Chamberí</h3>
+            <p>Un rincón tranquilo con mesas de madera y mucha luz natural, perfecto para parar entre calle y calle.</p>
+            <a href="#" class="link-arrow">Ver más <span aria-hidden="true" class="arrow"></span></a>
+          </article>
+
+          <article class="slide" style="--slide-image: url('img/madrid3.jpg')" hidden>
+            <h3>Nimbo<br>Lavapiés</h3>
+            <p>Café de especialidad y leche de avena en un barrio con mucha vida, para quien necesita su pausa a cualquier hora.</p>
+            <a href="#" class="link-arrow">Ver más <span aria-hidden="true" class="arrow"></span></a>
+          </article>
+        </div>
+
+        <div class="carousel-dots" role="tablist" aria-label="Elegir ubicación">
+          <button type="button" role="tab" aria-selected="true"  aria-label="Ubicación 1"></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Ubicación 2"></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Ubicación 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conócenos -->
+    <section class="section about" id="conocenos">
+      <div class="container">
+        <h2>Conócenos mejor</h2>
+
+        <article class="about-item">
+          <img class="about-img about-img--left" src="img/persona-cafe.jpg" alt="Persona sosteniendo una taza de café junto a una ventana" loading="lazy">
+          <div class="about-text">
+            <h3>Nimbo: una idea simple</h3>
+            <p>Nimbo nació de una idea simple: el café debería ser una pausa, no una prisa. En un momento en que todo pide rapidez, decidimos crear un espacio donde el tiempo se mueve distinto — donde una taza de oat latte se disfruta despacio, sin ruido de fondo ni urgencias.</p>
+            <a href="#" class="link-arrow">Leer más <span aria-hidden="true" class="arrow"></span></a>
+          </div>
+        </article>
+
+        <article class="about-item about-item--reverse">
+          <img class="about-img about-img--right" src="img/barra-cafe.jpg" alt="Cafés con leche de avena sobre una mesa de madera" loading="lazy">
+          <div class="about-text">
+            <h3>Un respiro en tu día a día</h3>
+            <p>Trabajamos con tueste suave y leche de avena como protagonistas, no como opciones secundarias. Cada local Nimbo mantiene la misma calma, la misma estética ligera, la misma intención: que quien entra encuentre un pequeño respiro en medio del día. No somos la cafetería más grande ni la más rápida. Somos, simplemente, tu pausa.</p>
+            <a href="#" class="link-arrow">Leer más <span aria-hidden="true" class="arrow"></span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="container">
+        <form class="newsletter-card" action="#" method="post">
+          <h2>Únete a nuestra Newsletter y sé la primera en enterarte de todas nuestras novedades</h2>
+
+          <div class="form-grid">
+            <label class="visually-hidden" for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" autocomplete="given-name" required>
+
+            <label class="visually-hidden" for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" autocomplete="family-name">
+
+            <label class="visually-hidden" for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="Correo electrónico" autocomplete="email" required class="form-grid__full">
+          </div>
+
+          <button type="submit" class="btn btn--dark">Suscribirme</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer" id="contacto">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-logo">Nimbo</p>
+          <p class="footer-tagline">Coffee shop | Madrid</p>
+        </div>
+
+        <nav aria-label="Pie de página">
+          <ul class="footer-nav">
+            <li><a href="#conocenos">Sobre nosotros</a></li>
+            <li><a href="#nuestro-cafe">Nuestro café</a></li>
+            <li><a href="#ubicaciones">Ubicaciones</a></li>
+            <li><a href="#carta">Carta</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          <h2 class="footer-title">Contacto</h2>
+          <address>
+            <a href="tel:+34912345678">+34 912 345 678</a>
+            <a href="mailto:hola@nimbo.es">hola@nimbo.es</a>
+            <span>Calle Gran Vía 28, 28013 Madrid</span>
+          </address>
+        </div>
+
+        <div class="footer-social">
+          <h2 class="footer-title">RRSS</h2>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="copyright">© 2026 Nimbo Coffee. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Menú móvil (burger)
+    (function () {
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('main-nav');
+
+      function setOpen(open) {
+        nav.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+      }
+
+      toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+      nav.addEventListener('click', (e) => { if (e.target.closest('a')) setOpen(false); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+      window.matchMedia('(min-width: 861px)').addEventListener('change', () => setOpen(false));
+    })();
+
+    // Carrusel de ubicaciones
+    (function () {
+      const slides = document.querySelectorAll('.carousel .slide');
+      const dots = document.querySelectorAll('.carousel-dots button');
+
+      function show(index) {
+        slides.forEach((slide, i) => {
+          slide.hidden = i !== index;
+          slide.classList.toggle('is-active', i === index);
+        });
+        dots.forEach((dot, i) => dot.setAttribute('aria-selected', String(i === index)));
+      }
+
+      dots.forEach((dot, i) => dot.addEventListener('click', () => show(i)));
+    })();
+  </script>
+</body>
+</html>
