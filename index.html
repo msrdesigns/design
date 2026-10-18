@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#212e43">
+  <title>Portfolio | Diseño y desarrollo web</title>
+  <meta name="description" content="Aquí encontrarás proyectos de diseño y desarrollo web. Trabajo con las últimas herramientas de IA, siempre con una mirada y un criterio propios">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Portada -->
+  <header class="hero">
+
+    <nav class="site-nav container" aria-label="Principal">
+      <a href="#proyectos" class="nav-link nav-link--light">Proyectos</a>
+      <a href="#" class="brand" aria-label="msr designs, inicio">
+        <img src="img/spiral.svg" alt="" width="52" height="48">
+      </a>
+      <a href="#contacto" class="nav-link nav-link--dark">Contacto</a>
+    </nav>
+
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>¡Hola! Soy María, bienvenidx a mi portfolio.</h1>
+        <p class="hero-sub">Aquí encontrarás proyectos de diseño y desarrollo web. Trabajo con las últimas herramientas de IA, siempre con una mirada y un criterio propios.</p>
+      </div>
+
+      <a href="#proyectos" class="btn btn--outline-light">
+        Ver proyectos
+        <svg viewBox="0 0 40 40" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 8v24M10 23l10 10 10-10"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Proyectos -->
+    <section class="projects" id="proyectos">
+      <div class="container">
+        <h2>Proyectos</h2>
+
+        <div class="project-grid">
+
+          <article class="project">
+            <a href="nimbo/" class="project-link" aria-label="Ver el proyecto Nimbo">
+              <img class="project-img" src="nimbo/img/hero.jpg" alt="Portafiltros, café molido y un latte sobre tablas de madera" loading="lazy">
+            </a>
+            <div class="project-body">
+              <p class="project-tag">Diseño web | HTML y CSS</p>
+              <h3>Nimbo</h3>
+              <p>Web para una cafetería de especialidad ficticia.</p>
+              <a href="nimbo/" class="link-arrow">Ver proyecto <span aria-hidden="true" class="arrow"></span></a>
+            </div>
+          </article>
+
+          <article class="project project--soon">
+            <div class="project-img project-img--placeholder" aria-hidden="true"></div>
+            <div class="project-body">
+              <p class="project-tag">Próximamente</p>
+              <h3>Nuevo proyecto</h3>
+              <p>Estoy preparando más diseños para este portfolio. Vuelve pronto.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer" id="contacto">
+    <div class="container footer-inner">
+      <div>
+        <img class="footer-logo" src="img/spiral.svg" alt="msr designs" width="52" height="48">
+        <p class="footer-text">María Sánchez Raya | Diseño y desarrollo web</p>
+
+        <ul class="footer-details">
+          <li><a href="tel:+34000000000">+34 722 46 74 41</a></li>
+          <li><a href="mailto:tu@email.com">designwebmaria@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="https://www.linkedin.com/in/maria-sanchez-raya" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/msrdesigns" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+
+    <p class="copyright">© 2026 María Sánchez Raya. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

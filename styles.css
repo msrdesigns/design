@@ -1,0 +1,388 @@
+/* ==========================================================================
+   msr designs · Portfolio (degradado azul y blanco · Inter)
+   ========================================================================== */
+
+/* 1. Variables
+   -------------------------------------------------------------------------- */
+:root {
+  /* Color */
+  --color-navy: #212e43;
+  --color-navy-dark: #1b283e;
+  --color-pale: #b5cdde;
+  --color-mist: #e6eff6;
+  --color-white: #ffffff;
+  --line: rgb(33 46 67 / 0.3);
+
+  /* Tipografía */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Layout */
+  --container: 1115px;
+  --gutter: 1.5rem;
+  --radius: 16px;
+  --section-space: clamp(4rem, 10vw, 8rem);
+}
+
+/* 2. Reset y base
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  color: var(--color-navy);
+  background-color: var(--color-white);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-navy);
+  outline-offset: 3px;
+}
+
+.container {
+  width: min(100% - var(--gutter) * 2, var(--container));
+  margin-inline: auto;
+}
+
+/* 3. Botones
+   -------------------------------------------------------------------------- */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: min(100%, 428px);
+  min-height: 50px;
+  padding: 0.6rem 1.25rem;
+  font-family: inherit;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 500;
+  background: transparent;
+  border: 1.5px solid currentColor;
+  border-radius: var(--radius);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.btn--outline-light {
+  color: var(--color-white);
+}
+
+.btn--outline-light:hover {
+  color: var(--color-navy);
+  background-color: var(--color-white);
+}
+
+.btn--outline-dark {
+  color: var(--color-navy);
+}
+
+.btn--outline-dark:hover {
+  color: var(--color-white);
+  background-color: var(--color-navy);
+}
+
+/* 4. Portada (hero con degradado)
+   -------------------------------------------------------------------------- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+  color: var(--color-white);
+  background:
+    radial-gradient(70% 80% at 100% 0%, rgb(255 255 255 / 0.95) 0%, rgb(255 255 255 / 0) 62%),
+    radial-gradient(80% 90% at 0% 100%, rgb(24 56 94 / 0.85) 0%, rgb(24 56 94 / 0) 70%),
+    linear-gradient(135deg, #2b5f8a 0%, #5d97c0 45%, #b5cdde 75%, #ffffff 100%);
+}
+
+/* Cabecera */
+.site-nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 100px;
+}
+
+.nav-link {
+  font-size: clamp(0.95rem, 2vw, 1.5rem);
+  font-weight: 300;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+.nav-link--light {
+  justify-self: start;
+  color: var(--color-white);
+}
+
+.nav-link--dark {
+  justify-self: end;
+  color: var(--color-navy-dark);
+}
+
+.brand {
+  display: block;
+  line-height: 0;
+}
+
+.brand img {
+  width: clamp(40px, 5vw, 64px);
+  height: auto;
+  transition: opacity 0.2s ease;
+}
+
+.brand:hover img {
+  opacity: 0.7;
+}
+
+/* Contenido de la portada */
+.hero-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(2.5rem, 7vw, 5rem);
+  padding-block: clamp(4rem, 12vh, 8rem);
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 46rem;
+  text-shadow: 0 2px 24px rgb(24 56 94 / 0.25);
+}
+
+.hero-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4.6vw, 3.25rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.hero-sub {
+  max-width: 34rem;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-weight: 300;
+}
+
+/* 5. Proyectos
+   -------------------------------------------------------------------------- */
+.projects {
+  padding-block: clamp(4rem, 10vw, 8rem);
+  background: linear-gradient(180deg, var(--color-mist) 0%, var(--color-pale) 100%);
+}
+
+.projects h2 {
+  font-size: clamp(2rem, 4.4vw, 3rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: 3rem 2.5rem;
+  margin-top: 3rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.project-link {
+  display: block;
+}
+
+.project-img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border: 1.5px solid var(--color-navy);
+  border-radius: var(--radius);
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover .project-img {
+  transform: translateY(-4px);
+}
+
+.project-img--placeholder {
+  background: rgb(255 255 255 / 0.3);
+  border-style: dashed;
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.project-tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.project-body h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.project-body p:not(.project-tag) {
+  max-width: 28rem;
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+.project--soon {
+  opacity: 0.7;
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.arrow {
+  display: inline-grid;
+  place-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+}
+
+.arrow::after {
+  content: "";
+  width: 0.38rem;
+  height: 0.38rem;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  transform: translateX(-1px) rotate(45deg);
+}
+
+/* 6. Pie de página
+   -------------------------------------------------------------------------- */
+.site-footer {
+  padding-block: clamp(3rem, 8vw, 5rem) 2rem;
+  color: var(--color-white);
+  background-color: var(--color-navy);
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgb(255 255 255 / 0.2);
+}
+
+.footer-logo {
+  width: 64px;
+  height: auto;
+}
+
+.footer-text {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--color-white);
+}
+
+.footer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.footer-details a:hover,
+.footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.copyright {
+  margin-top: 1.5rem;
+  font-size: 0.7rem;
+  font-weight: 300;
+  text-align: center;
+  color: var(--color-white);
+}
+
+/* 7. Accesibilidad
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
